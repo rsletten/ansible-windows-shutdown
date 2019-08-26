@@ -1,6 +1,7 @@
 ---
 - hosts: windows
   gather_facts: no
+  ignore_errors: yes
   tasks:
   - name: Run an executable and send data to the stdin for the executable
     win_command: powershell.exe Stop-Computer -Force
